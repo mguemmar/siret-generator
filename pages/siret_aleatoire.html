@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="siret_aleatoire.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/arial-rounded-mt-bold" rel="stylesheet">
+    <title>Index stage</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // Numéro SIRET aléatoire
+
+        function aleatoire() {
+            var ale1 = Math.floor(Math.random() * 1000000000);
+            var ale2 = Math.floor(Math.random() * 1000) + 10;
+
+            if (ale1 < 100000000) {
+                ale1 = "0" + ale1;
+            }
+
+            if (ale2 < 100) {
+                all1 = ale1 + " - 0" + ale2;
+            }else{
+                all1 = ale1 + " - " + ale2;
+            }
+            document.getElementById("aleatoire").innerHTML = all1;
+        }
+
+    </script>
+
+    <header>
+        <div class="all_header">
+            <!-- logo  --> <img src="../Logo.png" alt="Logo INSEE">
+            <div class="titles">
+                <a href="index.html"><div><ion-icon name="home-outline"></ion-icon>Accueil</div></a>
+                <a href="#text"><div><ion-icon name="settings-outline"></ion-icon>Generer</div></a>
+                <a href="#text"><div class="def"><ion-icon name="help-circle-outline"></ion-icon>Plus d'infos</div></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="up">
+            <div class="all_main">
+                
+                <div class="commands">
+                    <a href="siret_aleatoire.html" class="current"><h3>Numéro SIRET aléatoire</h3></a>
+                    <a href="../base.html"><h3>Numéro SIRET avec base prédéfinie</h3></a>
+                    <a href="nic.html"><h3>Plusieurs NIC pour un même SIREN</h3></a>
+                </div>
+
+                <div class="input">
+                    <h3>Appuyer pour générer :</h3>
+                    <hr>
+                    <button onclick="aleatoire()">Générer</button>
+                </div>
+
+                <div class="output">
+                    <h3>Le résultat :</h3>
+                    <hr>
+                    <h4 id="aleatoire"></h4>
+                </div>
+
+            </div>
+        </div>
+        <div id="text">
+            <div>
+                <h1>Qu'est ce que le numéro SIRET ?</h1>
+            </div>
+            <div>
+                <h2>Le numéro SIRET est un identifiant d'établissement.</h2>
+                <hr>
+                <p>
+                    Cet identifiant numérique de 14 chiffres est articulé en deux parties la première est le numéro Siren de l'unité légale à laquelle appartient l'unité Siret. La seconde, habituellement appelée NIC (Numéro Interne de Classement). se compose d'un numéro d'ordre a quatre chiffres attribué a l'établissement et d'un chiffre de contrôle, qui permet de vérifier la validité de l'ensemble du numéro Siret.
+                </p>
+            </div>
+            <div>
+                <h2>Qu'est ce que le numéro SIREN ?</h2>
+                <hr>
+                <p>
+                    Le numéro Siren est un identifiant de 9 chiffres attribué à chaque unité légale. Les huit premiers chiffres n'ont aucune signification. excepté pour les organismes publies (communes... ) dont le numéro Siren commence obligatoirement par 1 ou 2, Le neuvième chiffre est un chiffre de contrôle de validité du numéro. 
+                </p>
+            </div>
+            <div>
+                <h2>Qu'est ce qu'un numéro NIC ?</h2>
+                <hr>
+                <p>
+                    Le numéro interne de classement (NIC) correspond aux 5 derniers chiffres du numéro Siret ; les neuf premiers étant ceux du Siren de l’unité légale dont dépend l’établissement. Ce numéro est attribué dans le Système informatisé du répertoire national des entreprises et des établissements (Sirene) lors de la création de l’établissement. <br>
+                    Il permet d’identifier l’établissement au sein de l’unité légale (Siren) à laquelle il est rattaché.
+                </p>
+            </div>
+            <div class="image">
+                <a href="siret.png"><img src="siret.png" alt=""></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="media">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+        
+        <h4 class="made">Made by <a href="#">Massi KANEM</a> </h4>
+        <h4 class="reserve">©SirtaIT 2022. All Rights Reserved.</h4>
+    </footer>
+</body>
+</html>
